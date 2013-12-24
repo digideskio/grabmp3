@@ -10,7 +10,7 @@ while(chomp($line = <>)){
     $breakit =~ s/\s/%20/g; #replace spaces with %20
     $url= $base . $breakit;
     
-    my($fnum,$fnm) = split(/-/,$fname,2);
+    my($fnum,$fnm) = split(/ /,$fname,2);
     $fnm =~s/^\s+|\s+$//g;
 	print "Downloading  " . "$fnm" . "\n";
 	$filename = "./$fnm";
